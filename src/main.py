@@ -23,8 +23,7 @@ class Application:
         pygame.display.set_caption("Snake")
         self.clock = pygame.time.Clock()
         self.running = True
-
-                message_bus.restart_requested.connect(self.on_restart_requested)
+        message_bus.restart_requested.connect(self.on_restart_requested)
         message_bus.spawn_new_apple_requested.connect(self.on_spawn_new_apple_requested)
 
         self.snake_group = [
